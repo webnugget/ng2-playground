@@ -46,8 +46,7 @@ export const NPM_DEPENDENCIES = [
   { src: 'angular2/bundles/angular2.min.js', inject: 'libs', dest: LIB_DEST },
   { src: 'angular2/bundles/router.js', inject: 'libs', dest: LIB_DEST }, // use router.min.js with alpha47
   { src: 'angular2/bundles/http.min.js', inject: 'libs', dest: LIB_DEST },
-
-  { src: 'bootstrap/dist/css/bootstrap.min.css', inject: true, dest: CSS_DEST }
+  //{ src: 'socket.io-client/socket.io.js', dest: LIB_DEST, inject: 'libs' }
 ];
 
 // Declare local files that needs to be injected
@@ -68,7 +67,8 @@ const SYSTEM_CONFIG_DEV = {
   defaultJSExtensions: true,
   paths: {
     'bootstrap': `${APP_ROOT}bootstrap`,
-    '*': `${APP_BASE}node_modules/*`
+    '*': `${APP_BASE}node_modules/*`,
+    'socket.io-client': `${APP_BASE}node_modules/socket.io-client/socket.io.js`
   }
 };
 

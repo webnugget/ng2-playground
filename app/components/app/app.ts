@@ -6,19 +6,18 @@ import {
 // import {HTTP_PROVIDERS} from 'angular2/http';
 
 import {HomeCmp} from '../home/home';
-import {AboutCmp} from '../about/about';
-import {NameList} from '../../services/name_list';
+import {ChatCmp} from '../chat/chat';
 
 @Component({
   selector: 'app',
-  viewProviders: [NameList],
+  viewProviders: [],
   templateUrl: './components/app/app.html',
   styleUrls: ['./components/app/app.css'],
   encapsulation: ViewEncapsulation.None,
   directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-  { path: '/', component: HomeCmp, as: 'Home' },
-  { path: '/about', component: AboutCmp, as: 'About' }
+  { path: '/chat', component: ChatCmp, as: 'Chat' },
+  { path: '/', component: HomeCmp, as: 'Home' }
 ])
 export class AppCmp {}
